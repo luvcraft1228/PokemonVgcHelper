@@ -17,7 +17,7 @@ export type DatabaseConfig = {
  */
 export function getDatabaseConfig(): DatabaseConfig {
   const host: string = process.env.DATABASE_HOST ?? "localhost";
-  const port: number = Number.parseInt(process.env.DATABASE_PORT ?? "5432", 10);
+  const port: number = Number.parseInt(process.env.DATABASE_PORT ?? "15432", 10);
   const user: string = process.env.DATABASE_USER ?? "postgres";
   const password: string = process.env.DATABASE_PASSWORD ?? "postgres";
   const database: string = process.env.DATABASE_NAME ?? "postgres";

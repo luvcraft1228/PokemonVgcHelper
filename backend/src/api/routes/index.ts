@@ -1,5 +1,6 @@
 import type { Application, Request, Response } from "express";
 import { createHealthRouter } from "./health.routes";
+import { createAuthRouter } from "../../modules/auth/auth.routes";
 
 /**
  * Enregistre tous les routeurs HTTP sur l'application Express.
@@ -11,5 +12,6 @@ export function registerRoutes(app: Application): void {
   });
 
   app.use("/health", createHealthRouter());
+  app.use("/auth", createAuthRouter());
 }
 

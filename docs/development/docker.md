@@ -6,7 +6,7 @@
 - Facultatif : GPU compatible pour accélérer Ollama (sinon CPU-only).
 
 ## Services
-- `backend` : API Node.js/Express (TypeScript) lancée via `npm run start:dev`.
+- `backend` : API Node.js/Express (TypeScript) lancée via `npm run start:dev` (accessible sur `http://localhost:3001`).
 - `postgres` : base PostgreSQL 16 avec volume persistant `postgres-data`.
 - `ollama` : moteur IA local accessible sur `http://localhost:11434`.
 
