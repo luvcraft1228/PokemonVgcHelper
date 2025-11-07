@@ -1,0 +1,78 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: base
+      args:
+        NODE_VERSION: 20-bullseye
+    command: npm run start:dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USER: vgc_helper
+      DATABASE_PASSWORD: vgc_helper
+      DATABASE_NAME: vgc_helper
+      DATABASE_SSL: "false"
+      DATABASE_POOL_MAX: 10
+      DATABASE_POOL_IDLE_TIMEOUT: 10000
+      OLLAMA_HOST: ollama
+      OLLAMA_PORT: 11434
+    volumes:
+      - ./backend:/app
+      - backend-node-modules:/app/node_modules
+      - ./backend/migrations:/app/migrations
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    networks:
+      - vgc-net
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: vgc_helper
+      POSTGRES_USER: vgc_helper
+      POSTGRES_PASSWORD: vgc_helper
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "vgc_helper"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - vgc-net
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    devices:
+      - "/dev/dri:/dev/dri" # accès GPU (optionnel, ignorer si indisponible)
+    networks:
+      - vgc-net
+
+volumes:
+  backend-node-modules:
+  postgres-data:
+  ollama-data:
+
+networks:
+  vgc-net:
+    driver: bridge
+

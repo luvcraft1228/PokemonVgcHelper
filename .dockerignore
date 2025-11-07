@@ -1,0 +1,27 @@
+# Common ignores
+node_modules
+build
+dist
+.git
+.gitignore
+npm-debug.log
+Dockerfile*
+docker-compose.yml
+.env
+.env.*
+**/.DS_Store
+**/Thumbs.db
+
+# Backend specifics
+backend/node_modules
+backend/build
+backend/dist
+backend/coverage
+backend/.eslintcache
+
+# Frontend specifics (à venir)
+frontend/node_modules
+frontend/dist
+frontend/.angular
+frontend/.cache
+
