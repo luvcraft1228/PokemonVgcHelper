@@ -48,3 +48,8 @@
 - Évaluer la qualité des suggestions sur 2-3 scénarios réels (ex. mode pluie, Trick Room, hyper-offense).
 - Ajuster le prompt engineering et décider du modèle par défaut.
 
+### Décision courante
+- Retenir un déploiement Ollama léger (`mistral:7b-instruct` ou `phi3:mini-4k-instruct`) exécuté localement.
+- Conserver l’intégralité du contexte utilisateur (jeux possédés, équipes, régulation) côté serveur et n’envoyer au modèle que ce qui est strictement nécessaire au moment de la requête.
+- Écarter l’API OpenAI en raison des coûts potentiels non compatibles avec les contraintes projet.
+
