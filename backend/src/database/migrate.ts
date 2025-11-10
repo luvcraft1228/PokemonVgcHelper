@@ -3,6 +3,7 @@ import { readdir } from "node:fs/promises";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
+import "../config/env"; // Charge les variables d'environnement depuis .env
 import { getPool } from "./pool";
 import { log } from "../shared/logger";
 
