@@ -19,7 +19,7 @@ Ce document détaille les phases de développement selon le plan défini dans `p
 
 ---
 
-## Phase 1 – Fondation 🔄 EN COURS
+## Phase 1 – Fondation Backend ✅ TERMINÉE
 
 ### 1.1 Setup Backend ✅
 - [x] Structure Node.js/Express avec TypeScript
@@ -27,31 +27,34 @@ Ce document détaille les phases de développement selon le plan défini dans `p
 - [x] Docker Compose (backend, PostgreSQL, Ollama)
 - [x] Configuration PostgreSQL et système de migrations
 
-### 1.2 Authentification 🔄
+### 1.2 Authentification ✅
 - [x] Structure routes/services/auth (scaffold)
 - [x] Migration SQL `users` et `refresh_tokens`
 - [x] Repository utilisateurs
 - [x] Service auth complet (register/login/refresh/logout)
 - [x] Middleware JWT
-- [ ] Tests unitaires auth
+- [x] Tests unitaires auth (27 tests, 100% couverture)
 
-### 1.3 Modules Teams/Pokemon ⏳ À FAIRE
+### 1.3 Modules Teams/Pokemon ⏳ REPORTÉ
 - [ ] Migrations SQL pour tables équipes et Pokémon
 - [ ] Models Teams/Pokemon
 - [ ] Repositories Teams/Pokemon
 - [ ] Services Teams/Pokemon
 - [ ] Routes/Contrôleurs Teams/Pokemon
 
+**Note :** Reporté après la création du frontend pour permettre les tests manuels de l'authentification.
+
 ---
 
-## Phase 2 – Frontend socle ⏳ À VENIR
+## Phase 2 – Frontend socle 🔄 PROCHAINE ÉTAPE
 
 - [ ] Initialisation Angular 20
 - [ ] Structure modules (core, shared, features)
 - [ ] Configuration Angular Material 3 + thèmes (clair/sombre Pokémon)
 - [ ] Pages authentification (login/register)
-- [ ] Dashboard utilisateur
-- [ ] Builder d'équipe simple (UI basique)
+- [ ] Intégration avec backend (service HTTP, gestion tokens)
+- [ ] Dashboard utilisateur simple
+- [ ] Navigation et guards d'authentification
 
 ---
 
@@ -101,11 +104,14 @@ Ce document détaille les phases de développement selon le plan défini dans `p
 
 ## État actuel
 
-**Dernière mise à jour :** 2025-11-10
+**Dernière mise à jour :** 2025-01-27
 
-**Phase active :** Phase 1.2 (Authentification)
+**Phase active :** Phase 2 (Frontend socle)
+
+**Changement de plan :** Priorité donnée au frontend pour permettre les tests manuels de l'authentification avant de continuer avec les modules backend.
 
 **Prochaines étapes immédiates :**
-1. Finaliser l'implémentation auth (tests)
-2. Créer les modules Teams/Pokemon (Phase 1.3)
+1. Créer le frontend Angular 20 avec authentification (Phase 2)
+2. Tester manuellement l'authentification via l'interface
+3. Reprendre les modules Teams/Pokemon (Phase 1.3) après validation du frontend
 

@@ -1,10 +1,12 @@
 # État actuel du projet
 
-**Dernière mise à jour :** 2025-11-10
+**Dernière mise à jour :** 2025-01-27
 
 ## Phase active
 
-**Phase 1 – Fondation** (en cours)
+**Phase 1 – Fondation Backend** ✅ TERMINÉE
+
+**Phase 2 – Frontend socle** 🔄 PROCHAINE ÉTAPE
 
 ### ✅ Complété
 
@@ -24,27 +26,39 @@
    - Middleware JWT `authenticateMiddleware`
    - Hash de mots de passe (Scrypt)
    - JWT natif (HS256, sans dépendances)
+   - **Tests unitaires complets** (27 tests, 100% couverture service/controller)
 
 3. **Architecture standardisée**
    - Structure par couche (Model-Controller-Services-Queries)
    - Documentation des patterns
    - Roadmap détaillée
 
-### 🔄 En cours
-
-- Tests unitaires pour l'authentification (à faire)
+4. **Infrastructure de tests**
+   - Configuration Jest + ts-jest
+   - Tests unitaires pour AuthService (register, login, refresh, logout)
+   - Tests unitaires pour AuthController (validation, appels service)
+   - Scripts npm : `test`, `test:watch`, `test:coverage`
 
 ### ⏳ Prochaines étapes immédiates
 
-1. **Modules Teams/Pokemon** (Phase 1.3)
+**Changement de plan :** Priorité donnée au frontend pour permettre les tests manuels de l'authentification.
+
+1. **Frontend Angular 20** (Phase 2) - PROCHAINE ÉTAPE
+   - Initialisation Angular 20
+   - Structure modules (core, shared, features)
+   - Configuration Angular Material 3 + thèmes (clair/sombre Pokémon)
+   - Pages authentification (login/register)
+   - Intégration avec backend (service HTTP, gestion tokens)
+   - Dashboard utilisateur simple
+   - Navigation et guards d'authentification
+
+2. **Modules Teams/Pokemon** (Phase 1.3) - REPORTÉ
    - Migrations SQL pour tables équipes et Pokémon
    - Models `Team` et `Pokemon`
    - Repositories correspondants
    - Services et controllers
-
-2. **Tests**
-   - Tests unitaires auth
-   - Tests d'intégration
+   - Tests unitaires pour les nouveaux modules
+   - **Reprendre après validation du frontend**
 
 ## Structure actuelle
 
