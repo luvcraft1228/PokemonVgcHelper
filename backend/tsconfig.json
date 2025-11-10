@@ -1,5 +1,6 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
+  "include": ["src/**/*"],
   "compilerOptions": {
     // File Layout
     "rootDir": "src",
@@ -9,7 +10,7 @@
     // See also https://aka.ms/tsconfig/module
     "module": "commonjs",
     "target": "es2020",
-    "types": ["node"],
+    "types": ["node", "jest"],
     "lib": ["es2020"],
     // For nodejs:
     // "lib": ["esnext"],
@@ -41,5 +42,10 @@
 
     "esModuleInterop": true,
     "resolveJsonModule": true,
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "**/build/**"
+  ]
 }

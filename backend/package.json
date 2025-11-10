@@ -4,7 +4,8 @@
   "description": "Pokemon VGC helper backend service",
   "main": "build/server.js",
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "clean": "rimraf build",
+    "build": "npm run clean && tsc --project tsconfig.json",
     "start": "node build/server.js",
     "start:dev": "ts-node --project tsconfig.json src/server.ts",
     "lint": "eslint \"src/**/*.ts\"",
@@ -18,11 +19,13 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "pg": "^8.16.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.0",

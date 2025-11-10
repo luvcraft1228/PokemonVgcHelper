@@ -6,7 +6,7 @@
 
 **Phase 1 – Fondation Backend** ✅ TERMINÉE
 
-**Phase 2 – Frontend socle** 🔄 PROCHAINE ÉTAPE
+**Phase 2 – Frontend socle** ✅ TERMINÉE
 
 ### ✅ Complété
 
@@ -39,20 +39,24 @@
    - Tests unitaires pour AuthController (validation, appels service)
    - Scripts npm : `test`, `test:watch`, `test:coverage`
 
+5. **Frontend Angular 20** (Phase 2) ✅
+   - Initialisation Angular 20 avec structure moderne
+   - Structure modules (core, shared, features)
+   - Configuration Angular Material 3 + thèmes Pokémon (clair/sombre)
+   - Pages authentification (login/register) avec formulaires réactifs
+   - Services HTTP et auth avec signals Angular
+   - Guards et interceptors pour la navigation
+   - Dashboard utilisateur simple
+   - Configuration CORS backend
+   - Utilisation de la syntaxe moderne (@if, @for, signals)
+
 ### ⏳ Prochaines étapes immédiates
 
-**Changement de plan :** Priorité donnée au frontend pour permettre les tests manuels de l'authentification.
+1. **Tests manuels de l'authentification** - EN COURS
+   - Tester le flux complet login/register via l'interface
+   - Valider la gestion des tokens et la navigation
 
-1. **Frontend Angular 20** (Phase 2) - PROCHAINE ÉTAPE
-   - Initialisation Angular 20
-   - Structure modules (core, shared, features)
-   - Configuration Angular Material 3 + thèmes (clair/sombre Pokémon)
-   - Pages authentification (login/register)
-   - Intégration avec backend (service HTTP, gestion tokens)
-   - Dashboard utilisateur simple
-   - Navigation et guards d'authentification
-
-2. **Modules Teams/Pokemon** (Phase 1.3) - REPORTÉ
+2. **Modules Teams/Pokemon** (Phase 1.3) - PROCHAINE ÉTAPE
    - Migrations SQL pour tables équipes et Pokémon
    - Models `Team` et `Pokemon`
    - Repositories correspondants

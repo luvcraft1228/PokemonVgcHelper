@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import type { Request, Response } from "express";
 import { BadRequestError } from "../../shared/http-error";
 
@@ -232,7 +234,7 @@ describe("AuthController", () => {
         refreshToken: "refresh-token",
       };
 
-      mockLogout.mockResolvedValue();
+      mockLogout.mockResolvedValue(undefined);
 
       await logoutController(mockRequest as Request, mockResponse as Response);
 
@@ -244,7 +246,7 @@ describe("AuthController", () => {
     it("devrait fonctionner même sans refresh token", async () => {
       mockRequest.body = {};
 
-      mockLogout.mockResolvedValue();
+      mockLogout.mockResolvedValue(undefined);
 
       await logoutController(mockRequest as Request, mockResponse as Response);
 

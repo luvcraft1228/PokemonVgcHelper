@@ -46,15 +46,16 @@ Ce document détaille les phases de développement selon le plan défini dans `p
 
 ---
 
-## Phase 2 – Frontend socle 🔄 PROCHAINE ÉTAPE
+## Phase 2 – Frontend socle ✅ TERMINÉE
 
-- [ ] Initialisation Angular 20
-- [ ] Structure modules (core, shared, features)
-- [ ] Configuration Angular Material 3 + thèmes (clair/sombre Pokémon)
-- [ ] Pages authentification (login/register)
-- [ ] Intégration avec backend (service HTTP, gestion tokens)
-- [ ] Dashboard utilisateur simple
-- [ ] Navigation et guards d'authentification
+- [x] Initialisation Angular 20
+- [x] Structure modules (core, shared, features)
+- [x] Configuration Angular Material 3 + thèmes (clair/sombre Pokémon)
+- [x] Pages authentification (login/register)
+- [x] Intégration avec backend (service HTTP, gestion tokens)
+- [x] Dashboard utilisateur simple
+- [x] Navigation et guards d'authentification
+- [x] Configuration CORS backend
 
 ---
 
@@ -106,12 +107,11 @@ Ce document détaille les phases de développement selon le plan défini dans `p
 
 **Dernière mise à jour :** 2025-01-27
 
-**Phase active :** Phase 2 (Frontend socle)
+**Phase active :** Phase 1.3 (Modules Teams/Pokemon) ou Phase 3 (Intégration IA)
 
-**Changement de plan :** Priorité donnée au frontend pour permettre les tests manuels de l'authentification avant de continuer avec les modules backend.
+**Frontend socle terminé :** Le frontend Angular 20 est opérationnel avec authentification complète, thèmes Pokémon, et intégration backend.
 
 **Prochaines étapes immédiates :**
-1. Créer le frontend Angular 20 avec authentification (Phase 2)
-2. Tester manuellement l'authentification via l'interface
-3. Reprendre les modules Teams/Pokemon (Phase 1.3) après validation du frontend
+1. Tester manuellement l'authentification via l'interface frontend
+2. Décider de la priorité : Modules Teams/Pokemon (Phase 1.3) ou Intégration IA (Phase 3)
 
