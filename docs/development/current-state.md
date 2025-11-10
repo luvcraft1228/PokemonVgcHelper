@@ -1,6 +1,6 @@
 # État actuel du projet
 
-**Dernière mise à jour :** 2025-01-27
+**Dernière mise à jour :** 2025-11-10
 
 ## Phase active
 
@@ -49,14 +49,13 @@
    - Dashboard utilisateur simple
    - Configuration CORS backend
    - Utilisation de la syntaxe moderne (@if, @for, signals)
+   - **Navigation latérale (sidenav)** avec visibilité conditionnelle selon l'authentification
+   - Bouton de déconnexion intégré dans la navigation
+   - Structure extensible pour futurs liens de navigation
 
 ### ⏳ Prochaines étapes immédiates
 
-1. **Tests manuels de l'authentification** - EN COURS
-   - Tester le flux complet login/register via l'interface
-   - Valider la gestion des tokens et la navigation
-
-2. **Modules Teams/Pokemon** (Phase 1.3) - PROCHAINE ÉTAPE
+1. **Modules Teams/Pokemon** (Phase 1.3) - PROCHAINE ÉTAPE
    - Migrations SQL pour tables équipes et Pokémon
    - Models `Team` et `Pokemon`
    - Repositories correspondants
