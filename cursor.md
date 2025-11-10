@@ -36,6 +36,17 @@
   - `feature-<id>` : une branche par nouvelle fonctionnalité (ex. `feature-1234`).
 - **IMPÉRATIF** Chaque série de modifications doit être validée par un commit.
 
+### Workflow de gestion du contexte
+- **IMPÉRATIF** Au début de chaque nouvelle conversation/session :
+  1. Lire `docs/development/roadmap.md` pour comprendre la roadmap complète.
+  2. Lire `docs/development/current-state.md` pour connaître l'état actuel du projet.
+  3. Utiliser ces fichiers comme source de vérité principale plutôt que de s'appuyer uniquement sur le contexte de conversation.
+- **IMPÉRATIF** À la fin de chaque étape/feature complétée :
+  1. Créer un commit avec un message descriptif.
+  2. Mettre à jour `docs/development/current-state.md` avec le nouvel état.
+  3. Recommander de démarrer une nouvelle conversation pour bénéficier d'un contexte frais.
+- **Objectif** : Maintenir un contexte propre et éviter la surcharge d'information entre les sessions.
+
 ### Hébergement cible
 - Backend Node.js sous Linux (Ubuntu) avec PM2.
 - Frontend Angular servi par Nginx sous Linux (Ubuntu).
