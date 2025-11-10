@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { loginController, logoutController, refreshController, registerController } from "./auth.controller";
+import { loginController, logoutController, refreshController, registerController } from "../controllers/auth.controller";
 
 /**
  * Crée le routeur d'authentification.

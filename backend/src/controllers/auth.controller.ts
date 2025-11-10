@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 
-import { AuthService } from "./auth.service";
-import { BadRequestError } from "../../shared/http-error";
+import { AuthService } from "../services/auth.service";
+import { BadRequestError } from "../shared/http-error";
 
 const authService = new AuthService();
 
